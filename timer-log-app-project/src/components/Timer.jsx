@@ -1,13 +1,12 @@
-import renderElapsedString from '../utils/helper';
-
-export default function Timer(props) {
-    const elapsedString = renderElapsedString(props.elapsed);
+import { renderElapsedString } from '../utils/helper'
+export default function Timer({ title, project, elapsed, runningSince }) {
+    const elapsedString = renderElapsedString(elapsed)
     return (
         <div className='flex justify-center'>
             <div className='bg-white shadow-md rounded-lg top-2 m-5 w-1/3'>
                 <div className='p-4'>
-                    <div className="text-xl">{props.title}</div>
-                    <div className="text-gray-500">{props.project}</div>
+                    <div className="text-xl">{title}</div>
+                    <div className="text-gray-500">{project}</div>
                     <div className="text-center mt-4">
                         <h2>{elapsedString}</h2>
                     </div>

@@ -1,29 +1,32 @@
-
 import { useState } from "react";
 import Timer from "./Timer";
-import ToggleableTimerForm from "./ToggleableTimerForm";
+import TimerForm from "./TimerForm";
 
-function EditableTimer(props) {
+export default function EditableTimer({
+    id,
+    title,
+    project,
+    elapsed,
+    runningSince,
+}) {
     const [editFormOpen, setEditFormOpen] = useState(false)
 
-    if(editFormOpen){
-        return (
-            <ToggleableTimerForm
-                id={props.id}
-                title={props.title}
-                project={props.project}
-            />
-        );
-    }else{
-        return (
-            <Timer
-                id={props.id}
-                title={props.title}
-                project={props.project}
-                elapsed={props.elapsed}
-                runningSince={props.runningSince}
-            />
-        );
-    }
+    return (
+        <>
+            {editFormOpen ? (
+                <TimerForm id={id} title={title} project={project} />
+            ) : (
+                <Timer
+                    id={id}
+                    title={title}
+                    project={project}
+                    elapsed={elapsed}
+                    runningSince={runningSince}
+                />
+            )}
+
+        </>
+
+    );
+
 }
-export default EditableTimer;

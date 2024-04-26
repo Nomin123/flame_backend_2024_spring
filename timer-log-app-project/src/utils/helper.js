@@ -1,4 +1,4 @@
-export default function renderElapsedString(elapsed, runningSince) {
+ function renderElapsedString(elapsed, runningSince) {
     let totalElapsed = elapsed;
     if (runningSince) {
         totalElapsed += Date.now() - runningSince;
@@ -25,3 +25,15 @@ function pad(numberString, size) {
     while (papped.length < size) papped = `0${papped}`;
     return papped;
 }
+
+function newTimer(attrs = {}) {
+    const timer = {
+        title: attrs.title || "Timer",
+        project: attrs.project || "Project",
+        id: Math.floor(Math.random() * 100),
+        elapsed: 0,
+    };
+    return timer;
+}
+
+export { newTimer, renderElapsedString };
