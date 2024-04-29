@@ -1,6 +1,6 @@
 import EditableTimer from "./EditableTimer";
 
-const EditableTimerList = ({ timers }) => {
+const EditableTimerList = ({ timers, onFormSubmit }) => {
     return (
         <div id='timers'>
             {timers.map((timer) => (
@@ -11,6 +11,7 @@ const EditableTimerList = ({ timers }) => {
                     project={timer.project}
                     elapsed={timer.elapsed}
                     runningSince={timer.runningSince}
+                    onFormSubmit={onFormSubmit}
                 />
             ))}
 

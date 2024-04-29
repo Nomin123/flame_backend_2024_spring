@@ -21,9 +21,9 @@ function millisecondsToHuman(ms) {
 }
 
 function pad(numberString, size) {
-    let papped = numberString;
-    while (papped.length < size) papped = `0${papped}`;
-    return papped;
+    let padded = numberString;
+    while (padded.length < size) padded = `0${padded}`;
+    return padded;
 }
 
 function newTimer(attrs = {}) {

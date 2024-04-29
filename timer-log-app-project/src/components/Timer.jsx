@@ -1,5 +1,9 @@
 import { renderElapsedString } from '../utils/helper'
-export default function Timer({ title, project, elapsed, runningSince }) {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash, faPenToSquare } from '@fortawesome/free-solid-svg-icons'
+
+
+export default function Timer({ title, project, elapsed, runningSince, onEditClick }) {
     const elapsedString = renderElapsedString(elapsed)
     return (
         <div className='flex justify-center'>
@@ -11,11 +15,11 @@ export default function Timer({ title, project, elapsed, runningSince }) {
                         <h2>{elapsedString}</h2>
                     </div>
                     <div className='flex justify-end mt-4'>
-                        <span className="mr-2">
-                            <i className="fas fa-edit"></i>
+                        <span className="mr-2" onClick={onEditClick}>
+                           <FontAwesomeIcon icon={faPenToSquare} />
                         </span>
                         <span>
-                            <i className="fas fa trash"></i>
+                            <FontAwesomeIcon icon={faTrash} />
                         </span>
                     </div>
                 </div>
