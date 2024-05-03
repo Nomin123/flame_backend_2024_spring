@@ -3,8 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash, faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 
 
-export default function Timer({ title, project, elapsed, runningSince, onEditClick }) {
+export default function Timer({ title, project, elapsed, runningSince, onEditClick, onTrashClick, id }) {
     const elapsedString = renderElapsedString(elapsed)
+    const handleTrashClick = () => {
+        onTrashClick(id)
+        console.log("delete", id)
+    }
     return (
         <div className='flex justify-center'>
             <div className='bg-white shadow-md rounded-lg top-2 m-5 w-1/3'>
@@ -18,7 +22,7 @@ export default function Timer({ title, project, elapsed, runningSince, onEditCli
                         <span className="mr-2" onClick={onEditClick}>
                            <FontAwesomeIcon icon={faPenToSquare} />
                         </span>
-                        <span>
+                        <span onClick={handleTrashClick}>
                             <FontAwesomeIcon icon={faTrash} />
                         </span>
                     </div>
