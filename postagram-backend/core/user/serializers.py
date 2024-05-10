@@ -12,11 +12,12 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = [
             "id",
+          
             "username",
             "first_name",
             "last_name",
-            "bio",
-            "avatar",
+            # "bio",
+            # "avatar",
             "email",
             "is_active",
             "created",

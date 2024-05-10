@@ -2,8 +2,7 @@ import uuid
 from django.contrib.auth.models import (
     AbstractBaseUser,
     BaseUserManager,
-    PermissionsMixin,
-    UserManager,
+    PermissionsMixin
 )
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import models
@@ -74,4 +73,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     @property
     def name(self):
         return f"{self.first_name} {self.last_name}"
+    
+
 
