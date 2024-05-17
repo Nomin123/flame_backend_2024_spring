@@ -5,9 +5,22 @@ import { newTimer } from "../utils/helper";
 import { useState } from "react";
 import TimerForm from "./TimerForm";
 import Timer from "./Timer";
+import { useEffect } from "react";
+
+const TIMER_URL='http://localhost:8000/api/timers/';
 
 export default function TimersDashboard() {
-    const [timers, setTimers] = useState(timersData);
+    const [timers, setTimers] = useState([]);
+
+    useEffect(()=>{
+        fetchData();
+    },[])
+
+const fetchData=async()=>{
+    const result=await fetch(TIMER_URL);
+    const data=await result.json()
+    setTimers(data)
+}
 
     const updateTimer = (attrs) => {
         setTimers((prevTimers) =>
