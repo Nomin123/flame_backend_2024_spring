@@ -19,8 +19,8 @@ class RegisterSerializer(UserSerializer):
         # List of all the fields that can be included in a request or a response
         fields = [
             "id",
-            # "bio",
-            # "avatar",
+            "bio",
+            "avatar",
             "email",
             "username",
             "first_name",
