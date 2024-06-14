@@ -6,7 +6,7 @@ function CreatePost() {
   const user = getUser();
   const [post, setPost] = useState("");
   const [validated, setvalidated] = useState(false);
-  console.log(user);
+  // console.log(user);
   const handleSubmit = (event) => {
 
 
@@ -17,7 +17,7 @@ function CreatePost() {
       body: post,
     };
 
-    console.log(data)
+    // console.log(data)
 
     axiosService
       .post("/post/", data)
@@ -32,17 +32,17 @@ function CreatePost() {
   return (
     <div className=" w-[700px] h-[120px] p-[30px] rounded-lg border flex gap-[20px] items-center justify-left">
       <img
-        className="w-[95px] h-[95px] border-grey-200 rounded-full border-solid"
+        className="w-[50px] h-[50px] border-grey-200 rounded-full border-solid"
         src="https://api.dicebear.com/7.x/pixel-art/svg"
         alt=""
       />
       <input
         type="text"
-        className="w-[500px] h-[50px] rounded-full border-gray-100 bg-sky-100  border-solid pl-[20px] "
+        className="w-[450px] h-[50px] rounded-full border-gray-100 bg-sky-100  border-solid pl-[20px] "
         placeholder="Write post"
         onChange={(event) => setPost(event.target.value)}
       />
-      <button className="bg-blue-300 rounded-lg" onClick={handleSubmit}>
+      <button className="bg-blue-500 rounded-lg w-[120px] h-[45px] text-white" onClick={handleSubmit}>
         post me
       </button>
 

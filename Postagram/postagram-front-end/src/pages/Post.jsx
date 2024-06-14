@@ -1,28 +1,37 @@
-function Post() {
+function Post(props) {
+  console.log(props)
   return (
-    <div className="w-[700px] h-[300px] border-solid rounded-lg border-blue-500 bg-amber-200 flex flex-col gap-[10px] ">
-      {/* my name is {user.username} */}
-      <div className="flex gap-[12px] justify-left p-[20px]">
+    <div className="w-[700px] h-[300px] border-solid rounded-lg border-1 border-gray flex flex-col gap-[10px] p-[20px]">
+      <div className="flex gap-[12px] justify-left items-center p-[20px]">
         <img
           className="w-[50px] h-[50px] rounded-full"
           src="https://api.dicebear.com/7.x/pixel-art/svg"
           alt=""
         />
-        <p></p>
+        <h6>1 day ago</h6>
       </div>
-      <p></p>
-      <div className="flex gap-[10px]">
-        <img className="w-[25px] h-[25px] rounded-full bg-red-100" src="like.png" alt="" />0 likes
+      <p className="pl-[25px]">{props.post.body}</p>
+      <div className="flex gap-[10px] pl-[15px]">
+        <img
+          className="w-[25px] h-[25px] rounded-full bg-red-100"
+          src="like.png"
+          alt=""
+        />
+        0 likes
       </div>
-      <div>comment</div>
-      <div>
-        <div>
-          <img src="" alt="" />
+      <div className="pl-[20px]"> 0 comment</div>
+      <div className="flex gap-[15px] pt-[20px]">
+        <div className="flex gap-[5px] content-center pl-[20px]">
+          <img className="w-[20px] h-[20px]" src="like-regular-24.png" alt="" />
           like
         </div>
-        <div>
-          <img src="" alt="" />
-          comment
+        <div className="flex gap-[5px] content-center">
+          <img
+            className="w-[20px] h-[20px]"
+            src="message-rounded-dots-regular-24.png"
+            alt=""
+          />
+          Comment
         </div>
       </div>
     </div>

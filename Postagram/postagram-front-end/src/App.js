@@ -4,6 +4,7 @@ import ProtectedRoute from "./routes/ProtectedRoute";
 import Home from "./pages/Home";
 import Registration from "./pages/Registration";
 import Login from "./pages/Login";
+import Bio from "./pages/Bio";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         }
       />
       <Route path="/login/" element={<div>Login</div>} />
+      <Route path="/profile/" element={<Bio />} />
     </Routes>
   );
 }
