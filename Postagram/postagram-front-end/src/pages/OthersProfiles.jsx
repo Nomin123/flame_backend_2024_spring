@@ -9,8 +9,8 @@ function OthersProfiles(props) {
           src="https://api.dicebear.com/7.x/pixel-art/svg"
           alt=""
         />
-        <a href="/profile">
-        <button className="w-[120px] h-[45px] rounded-lg bg-blue-600 text-white hover:bg-sky-700">
+        <a href="/profile/">
+        <button className="w-[120px] h-[45px] rounded-lg bg-blue-600 text-white hover:bg-sky-700" >
           See profile
         </button>
         </a>

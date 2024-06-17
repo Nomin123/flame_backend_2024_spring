@@ -46,10 +46,10 @@ function CreatePost() {
         post me
       </button>
 
-      {/* <div className="hidden w-[500px] h-[500px] border-solid rounded-lg border-blue-100 bg-amber-100">
+      {<div className="hidden w-[500px] h-[500px] border-solid rounded-lg border-blue-100 bg-amber-100">
           <h1 className="h-[80px] bg-pink-100">Create Post</h1>
           <textarea name="" id="" cols="30" rows="10" className="w-[400px] h-[400px] border-solid border-gray-300 border-2 rounded-lg"></textarea>
-        </div> */}
+        </div> }
     </div>
   );
 }

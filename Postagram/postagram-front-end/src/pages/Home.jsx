@@ -28,24 +28,24 @@ function Home() {
     });
 
   return (
-    <div className="flex flex-col gap-[10px] border-solid border-gray-100 border-2 rounded-lg ">
+    <div className="flex flex-col gap-[10px]  rounded-lg mt-[20px]">
       <Header />
       <div className="flex gap-[20px] justify-center">
-        <div className="flex flex-col gap-[20px] border-solid border-gray-100 border-2 rounded-lg ">
+        <div className="flex flex-col gap-[20px]  rounded-lg ">
           <CreatePost />
-          {/* {userPosts && 
+          {userPosts && 
             userPosts.map((post, index) => (
               <Post key={index} post={post} refresh={post.mutate}/>
-            ))} */}
+            ))} 
           
         </div>
         <div>
           <OthersProfiles />
-          {/* {user.data?.map((u, index) => <OthersProfiles key={index} user={u}/>)} */}
+          {user.data?.map((u, index) => <OthersProfiles key={index} user={u}/>)} 
         </div>
       </div>
-      my name is {user.username}
-      <button className="w-[30px] bg-black h-[30px]" onClick={()=>
+      {/* my name is {user.username}
+      <button className="w-[30px] bg-yellow-100 h-[30px]" onClick={()=>
         setshow(!show)}>
           {show ? (
             <div>
@@ -57,7 +57,7 @@ function Home() {
             </div>
           )}
         hi
-      </button>
+      </button> */}
     </div>
   );
 }

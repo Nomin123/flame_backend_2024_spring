@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Registration from "./pages/Registration";
 import Login from "./pages/Login";
 import Bio from "./pages/Bio";
+import Comment from "./pages/Comment"
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       />
       <Route path="/login/" element={<div>Login</div>} />
       <Route path="/profile/" element={<Bio />} />
+      <Route path="/comment/" element={<Comment />} />
     </Routes>
   );
 }
